@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-def day1(lines):
+def part1(lines):
     left = []
     right = []
 
@@ -20,16 +20,14 @@ def day1(lines):
 
 
 
-def day2(lines):
+def part2(lines):
     left = defaultdict(int)
     right = defaultdict(int)
-
 
     for line in lines:
         l, r = line.split()
         left[int(l)] += 1
         right[int(r)] += 1
-
 
     similarity = 0
     for l, count in left.items():
@@ -41,7 +39,7 @@ def day2(lines):
 if __name__ == "__main__":
     x = open("input/1")
     lines = x.readlines()
-    print("day1", day1(lines))
-    print("day2", day2(lines))
+    print("part1", part1(lines))
+    print("part2", part2(lines))
 
 
